@@ -1,0 +1,193 @@
+body, div, p, h1, h2, h3, h4 {
+  box-sizing: border-box;
+  margin: 0px;
+  -ms-overflow-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#container {
+  background-color: #CED8E4;
+  padding: 3% 1%;
+  height: 100vh;
+}
+#container h1 {
+  text-align: center;
+  font-size: 7em;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  height: 20%;
+  padding: 2%;
+}
+
+#info-box {
+  display: flex;
+  max-height: 80%;
+  padding: 1% 0%;
+}
+
+#info-left {
+  flex: 2;
+  margin-right: 1%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 950px;
+}
+
+#info-right {
+  background-color: white;
+  width: 800px;
+  height: 950px;
+  font-size: 1.1em;
+  border-radius: 10px;
+}
+
+.info-right-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 3% 5%;
+}
+.info-right-content h3 {
+  padding: 3% 0%;
+  margin-bottom: 5%;
+  position: relative;
+}
+.info-right-content .reserve {
+  flex: 1;
+  text-align: left;
+  margin-bottom: 5%;
+  display: flex;
+}
+.info-right-content .reserve div {
+  font-size: 1.2em;
+}
+.info-right-content .reserve div:nth-child(1) {
+  color: rgba(155, 108, 53, 0.5);
+  margin-right: 10%;
+  flex: 0.35;
+}
+.info-right-content .reserve div:nth-child(2) {
+  flex: 1;
+}
+
+#close {
+  border-style: none;
+  position: absolute;
+  padding: 10px 15px;
+  font-size: 0.7em;
+  left: 90%;
+}
+#close:hover {
+  cursor: pointer;
+}
+
+.off {
+  display: none;
+}
+
+.info-left-item {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  font-size: 1.1em;
+  margin-bottom: 1%;
+  border-radius: 10px;
+  height: 17%;
+}
+.info-left-item div {
+  padding: 1%;
+}
+.info-left-item div:nth-child(1) {
+  flex: 0.5;
+}
+.info-left-item div:nth-child(2) {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.info-left-item p {
+  padding: 3%;
+}
+.info-left-item:hover {
+  cursor: pointer;
+}
+
+.btn, .btnWhite {
+  background-color: #162149;
+  color: white;
+  padding: 1% 3%;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.1em;
+}
+.btn:hover, .btnWhite:hover {
+  cursor: pointer;
+}
+
+.btnWhite {
+  background-color: white;
+  color: black;
+}
+
+#info-right-wrap {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+  transition: all 0.5s;
+}
+
+#info-right-wrap.on {
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  #container {
+    padding: 0% 8px;
+  }
+  #container h1 {
+    font-size: 5em;
+    height: 15%;
+  }
+
+  #info-box {
+    display: block;
+    position: relative;
+  }
+
+  #info-left {
+    height: 1085px;
+    margin-bottom: 5%;
+  }
+
+  #info-right {
+    height: 90vh;
+    width: 100vw;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: translateY(100%);
+    transition: all 0.5s;
+    z-index: 3;
+  }
+
+  #info-right.on {
+    transform: translateY(0%);
+  }
+}/*# sourceMappingURL=app.css.map */

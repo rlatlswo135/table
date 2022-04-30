@@ -1,0 +1,16 @@
+@mixin default() {
+    body,div,p,h1,h2,h3,h4{
+        box-sizing: border-box;
+        margin:0px;
+        -ms-overflow-style: none;
+    }
+    li{
+        list-style: none;
+    }
+    ::-webkit-scrollbar { display: none; }
+}
+
+$bgColor:#CED8E4;
+$btnColor:#162149;
+$reservedColor:#3BB94C;
+$seatedColor:#162149;
